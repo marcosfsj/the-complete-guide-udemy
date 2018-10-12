@@ -3,6 +3,9 @@
     <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail></app-recipe-detail>
+    <app-recipe-detail *ngIf="recipeToDisplay; else infoText" [recipeToDisplay]="recipeToDisplay"></app-recipe-detail>
+    <ng-template #infoText>
+      Please Select a recipe!
+    </ng-template>
   </div>
 </div>

@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'the-complete-guide-udemy';
+  loadedFeature = 'recipes';
+
+  onNavegate(feature: string) {
+    this.loadedFeature = feature;
+  }
+
 }
